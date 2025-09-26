@@ -1,0 +1,106 @@
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    padding: 0px;
+    background-color: #020000;
+    min-height: 90vh;
+    margin: 0px;
+}
+.contact-inner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap:50px;
+    width: 100%;
+    padding: 20px;
+}
+.email-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+}
+.email-content{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    font-size: 20px;
+}
+.linkedin:hover{
+    color: #0a66c2;
+}
+.linkedin,.github, .instagram{
+    color: white;
+    cursor: pointer;
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 200px;
+    margin-top: 10px;
+}
+.instagram:hover{
+    color: #f00075;
+}
+.github:hover{
+    color: #b27171;
+}
+.aa:hover{
+    color: #e6b106;
+    cursor: pointer;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: flex-start;
+    padding: 20px;
+    border: solid 2px #e6b106;
+    border-radius: 10px;
+}
+.left{
+    padding-left: 200px;
+    
+}
+.form h1{
+    text-align: center;
+}
+input,textarea{
+    background-color: transparent;
+    border: solid 1px rgb(82, 81, 81);
+    padding: 10px;
+    color: gold;
+    border-radius: 10px;
+}
+label{
+    text-align: left;
+    margin-left: 10px;
+}
+.btn{
+    background-color: #e64506;
+    color: rgb(227, 221, 221);
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+label, .input-box{
+    font-size: 20px;
+}

@@ -1,0 +1,26 @@
+.projects-container {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: #fcfbfb;
+}
+.projects-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+.project-card{
+    background-color: bisque;
+    padding: 20px;
+    border: solid black 2px;
+    margin: 10px;
+    border-radius: 20px;
+    color: black;
+}
+
+.project-card:hover{
+    color:black;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    color: #000;
+}

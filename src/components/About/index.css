@@ -1,0 +1,52 @@
+.about-content{
+    display: flex;
+    flex-direction: column;
+    color:white;
+    text-align: center;
+    padding: 0px;
+    background-color: #020000;
+    min-height: 90vh;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+}
+.about-bio{
+    font-size: 25px;
+    font-family: Lato, sans-serif;
+    padding: 0px 100px;
+}
+.color3{
+    color:#22D3EE;
+    font-size: 40px;
+}
+.color4{
+    color:#8B5CF6; 
+
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+.card{
+    background-color:#334155;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    margin: 10px;
+    border : 2px solid #A78BFA;
+    min-width: 250px;
+    min-height: 200px;
+    text-align: center;
+}
+.icon{
+    background-color: #7C3AED;
+    padding: 20px;
+    border-radius: 50%;
+}
+.role{
+    font-family: caviard;
+    color: #d2e712;
+    font-weight: bold;
+}
