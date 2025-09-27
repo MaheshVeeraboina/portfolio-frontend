@@ -50,3 +50,99 @@
     color: #d2e712;
     font-weight: bold;
 }
+/* Tablets */
+@media (max-width: 1024px) {
+    .about-bio {
+        font-size: clamp(18px, 2vw, 22px);
+        padding: 0 50px;
+    }
+
+    .cards-container {
+        flex-wrap: wrap; /* allow cards to wrap */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 45%; /* two cards per row */
+        min-width: unset;
+        min-height: 200px;
+        padding: 15px;
+    }
+
+    .icon {
+        padding: 15px;
+    }
+
+    .color3 {
+        font-size: clamp(28px, 4vw, 36px);
+    }
+
+    .role {
+        font-size: clamp(18px, 2.5vw, 22px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px;
+    }
+
+    .about-bio {
+        font-size: clamp(14px, 3vw, 18px);
+        padding: 0 20px;
+    }
+
+    .cards-container {
+        flex-direction: column; /* stack cards vertically */
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%; /* full width cards */
+        min-width: unset;
+        padding: 10px;
+    }
+
+    .icon {
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .color3 {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+
+    .role {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .about-bio {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .icon {
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .role {
+        font-size: 14px;
+    }
+
+    .color3 {
+        font-size: 22px;
+    }
+}

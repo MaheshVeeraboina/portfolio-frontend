@@ -94,7 +94,7 @@ label{
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px;
     text-align: center;
     align-items: center;
     display: flex;
@@ -103,4 +103,120 @@ label{
 }
 label, .input-box{
     font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .contact-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .left {
+        padding-left: 0;
+        text-align: center;
+        width: 90%;
+    }
+    .icon-2{
+        font-size: 40px;
+    }
+
+    .form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .email-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    label, .input-box {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .contact-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .icon-2{
+        font-size: 30px;
+    }
+
+    .left, .form {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    .email-container {
+        gap: 8px;
+    }
+
+    .email-content {
+        font-size: 16px;
+    }
+
+    label, .input-box {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .contact-content h1 {
+        font-size: 24px;
+    }
+
+    .email-content p, .email-content h3 {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 14px;
+    }
+    .icon-2{
+        font-size: 25px;
+    }
+
+    label, .input-box {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 40px;
+}
+.footer p {
+  margin: 0;
 }

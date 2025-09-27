@@ -44,3 +44,153 @@
     font-weight: bold;
     margin-top: 20px;
 }
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .profile-pic {
+        width: 300px;
+        height: 330px;
+        padding-left: 0px;
+        margin: 0 auto 20px auto; /* center image */
+        display: block;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    .right {
+        padding-right: 30px;
+        text-align: center;
+    }
+
+    .name {
+        font-size: clamp(30px, 5vw, 50px);
+    }
+
+    .bio {
+        font-size: clamp(16px, 2.5vw, 25px);
+    }
+
+    .resume-btn {
+        font-size: clamp(14px, 2vw, 20px);
+        padding: 10px 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column; /* stack image on top */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+    .profile-pic {
+        width: 180px;
+        height: 200px;
+        padding-left: 0px;
+        margin: 0 auto 15px auto; /* center image */
+        display: block;
+    }
+
+    .right {
+        padding-right: 0;
+    }
+
+    .name {
+        font-size: clamp(24px, 6vw, 40px);
+    }
+
+    .bio {
+        font-size: clamp(14px, 4vw, 20px);
+    }
+
+    .resume-btn {
+        font-size: clamp(12px, 3vw, 16px);
+        padding: 8px 16px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 150px;
+        height: 170px;
+        padding-left: 0px;
+        margin: 0 auto 10px auto;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .bio {
+        font-size: 12px;
+    }
+
+    .resume-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+/* Mobile and small screens */
+/* Mobile & small screens */
+@media (max-width: 768px) {
+    .home-content {
+        display: flex;
+        flex-direction: column; /* stack image and text */
+        justify-content: center; /* center vertically (if needed) */
+        align-items: center; /* center horizontally */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .left {
+        width: 100%; /* full width to help center */
+        display: flex;
+        justify-content: center; /* center the image horizontally */
+        margin-bottom: 20px; /* spacing below image */
+    }
+
+    .profile-pic {
+        width: 180px; /* smaller image */
+        height: 200px;
+        padding-left: 0px;
+        margin: 0; /* remove any previous margins */
+        display: block; /* ensure block element for centering */
+    }
+
+    .right {
+        width: 100%; /* full width for text */
+        padding: 0; /* reset padding */
+    }
+
+    .name {
+        font-size: clamp(24px, 6vw, 40px);
+    }
+
+    .bio {
+        font-size: clamp(14px, 4vw, 20px);
+    }
+
+    .resume-btn {
+        font-size: clamp(12px, 3vw, 16px);
+        padding: 8px 16px;
+    }
+}
+

@@ -10,9 +10,9 @@ class About extends Component {
     render() {
         return (
             <>
-                <Header />  
+                 
                 <div className="about-content">
-                    <h1 className="color3">About <span className="role">Me</span></h1>
+                    <h1 >About <span className="role">Me</span></h1>
                     <p className="about-bio">Hi! I’m Veeraboina Mahesh Yadav, a passionate Full Stack Developer skilled in MERN stack,  Node.js, Express, React, and SQLite. I love building web applications and backend systems that solve real problems and create meaningful experiences. Always curious and eager to learn, I enjoy turning ideas into action and growing through challenges.</p>
                     <div className="cards-container">
                     <div className="card">

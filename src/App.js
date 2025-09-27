@@ -4,10 +4,12 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Header from './components/Header';
 
 function App() {
   return (
     <BrowserRouter>
+    <Header/>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />

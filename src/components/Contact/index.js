@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./index.css";
-import Header from "../Header";
+import { ClipLoader } from "react-spinners";
+import { BsCheckCircleFill } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -10,51 +11,71 @@ import { IoSend } from "react-icons/io5";
 import { IoLocationSharp } from "react-icons/io5";
 
 class Contact extends Component {
-
-    state = {
+  state = {
     name: "",
     email: "",
     message: "",
-    status: "", // For success/error messages
+    status: "", // 'loading', 'success', or 'error'
   };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = async (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = this.state;
 
-    try {
-      const response = await fetch("http://localhost:3000/contact/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (response.ok) {
-        const result = await response.text();
-        this.setState({ status: result, name: "", email: "", message: "" });
-      } else {
-        const error = await response.text();
-        this.setState({ status: `Error: ${error}` });
-      }
-    } catch (err) {
-      this.setState({ status: `Error: ${err.message}` });
+    if (!name || !email || !message) {
+      this.setState({ status: "error" });
+      return;
     }
+
+    // Simulate sending data
+    this.setState({ status: "loading" });
+
+    setTimeout(() => {
+      this.setState({
+        status: "success",
+        name: "",
+        email: "",
+        message: "",
+      });
+    }, 2000); // simulate 2s loading
+  };
+
+  renderStatusMessage = () => {
+    const { status } = this.state;
+    if (status === "loading") {
+      return (
+        <div className="status-container">
+          <ClipLoader
+            height={30}
+            width={30}
+            color="#0b69ff"
+            ariaLabel="loading"
+          />
+          <p>Sending message...</p>
+        </div>
+      );
+    }
+    if (status === "success") {
+      return <p className="status-message success"><BsCheckCircleFill style={{ color: "#03c326ff", marginRight: "8px" }} />Message sent successfully!</p>;
+    }
+    if (status === "error") {
+      return <p className="status-message error">Please fill all fields!</p>;
+    }
+    return null;
   };
 
   render() {
-    const { name, email, message, status } = this.state;
+    const { name, email, message } = this.state;
 
     return (
-        <>
-            <Header />
-            <div className="contact-content">
-                <h1>Get In <span className="role">Touch</span></h1>
-                <div className="contact-inner">
-                <div className="left">
+      <div className="contact-content">
+        <h1>Get In <span className="role">Touch</span></h1>
+        <div className="contact-inner">
+          <div className="left">
                     <h1>Contact Information</h1>
                     <div className="email-container">
                         <MdOutlineMail className="icon-2 color"  size={40} />
@@ -96,23 +117,48 @@ class Contact extends Component {
                         
                     </div>
                 </div>
-                <div className="right">
-                    <form className="form" onSubmit={this.handleSubmit}>
-                        <h1>Send Me A Message</h1>
-                        <label htmlFor="name">Your Name</label>
-                        <input type="text" name="name" placeholder="Please Enter Your Name" value={name} onChange={this.handleChange} required className="input-box"/>
-                        <label htmlFor="email">Your Email</label>
-                        <input type="email" name="email" placeholder="Please Enter Your Email" value={email} onChange={this.handleChange} required className="input-box"/>
-                        <label htmlFor="message">Message</label>
-                        <textarea name="message" rows="6" placeholder="Hi I'd like to talk about..." value={message} onChange={this.handleChange} required className="input-box"/>
-                        <button type="submit" className="btn">Send Message <IoSend/></button>
-                        {status && <p className="status-message">{status}</p>}
-                    </form>
-                </div>
-                </div>
-            </div>
-        </>
-    )
-    }
+
+          <div className="right">
+            <form className="form" onSubmit={this.handleSubmit}>
+              <h1>Send Me A Message</h1>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={name}
+                onChange={this.handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={this.handleChange}
+                required
+              />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Hi I'd like to talk about..."
+                value={message}
+                onChange={this.handleChange}
+                required
+              />
+              <button type="submit" className="btn">
+                Send Message <IoSend />
+              </button>
+              {this.renderStatusMessage()}
+            </form>
+          </div>
+        </div>
+        <footer className="footer">
+          <p>© 2025 Mahesh Veeraboina. All rights reserved.</p>
+        </footer>
+
+      </div>
+    );
+  }
 }
+
 export default Contact;
